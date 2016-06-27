@@ -1,0 +1,23 @@
+title: Software Craftmanship
+name: Dang Chien
+url: https://dangchien.github.io
+description: About things I did, places I've been to, persons I met...
+author: Duong Dang Chien
+keywords: Android, Java, Blog, Hanoi, Singapore
+social:
+  name: Duong Dang Chien
+  links:
+   - https://twitter.com/dangchien87
+   - https://github.com/DangChien
+
+permalink: /:year/:month/:day/:title/ 
+paginate: 3
+paginate_path: "/blog/page:num/"
+highlighter: pygments
+
+gems:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile', 'CNAME']

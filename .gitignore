@@ -116,3 +116,9 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+##############################
+# Jekyll generated folders
+##############################
+_site/
+.sass-cache/
