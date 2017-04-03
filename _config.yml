@@ -1,19 +1,21 @@
-title: Software Craftmanship
-name: Dang Chien
-url: https://dangchien.github.io
-description: About things I did, places I've been to, persons I met...
+title: "Duong Dang Chien's Blog"
+description: Software engineer who comes from Hanoi and lives in Singapore
+url: http://www.dangchien.com 
 author: Duong Dang Chien
-keywords: Android, Java, Blog, Hanoi, Singapore
+twitter:
+  username: dangchien87
 social:
   name: Duong Dang Chien
   links:
-   - https://twitter.com/dangchien87
-   - https://github.com/DangChien
+    - https://twitter.com/dangchien87
+    - https://github.com/DangChien
+    - https://www.linkedin.com/in/duong-dang-chien-1b917b22/
+    - https://stackoverflow.com/users/1277688/ck1910
 
-permalink: /:year/:month/:day/:title/ 
-paginate: 3
-paginate_path: "/blog/page:num/"
-highlighter: pygments
+permalink: /:year/:month/:day/:title/
+paginate: 5
+highlighter: rouge
+excerpt_separator: <!--more-->
 
 gems:
   - jekyll-sitemap
