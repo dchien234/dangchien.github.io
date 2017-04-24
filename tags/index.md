@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tag Cloud
+title: Blog Tags
 ---
 # {{ page.title }}
 

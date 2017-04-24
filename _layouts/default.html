@@ -28,6 +28,8 @@
       document.head.appendChild(link);
     }
   </script>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </head>
 
 <body>
@@ -39,16 +41,15 @@
           <a class="btn btn-link navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
             <i class="fa fa-bars fa-lg"></i>
           </a>
-          <a class="navbar-brand" href="/"><i class="fa fa-code fa-lg"></i></a>
+          <a class="navbar-brand" href="/"><i class="fa fa-futbol-o fa-lg"></i></a>
         </div>
         <ul class="nav navbar-nav collapse navbar-collapse">
           <li><a href="/archives">Archives</a></li>
           <li><a href="/tags">Tags</a></li>
-          <!-- <li><a href="/blogroll">Blogroll</a></li> -->
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
             <div class="dropdown-menu dropdown-menu-flex">
-              <a href="/about">Me</a>
+              <a href="/about" alt="Me" target="_self"><i class="fa fa-male fa-lg"></i></a>
               <a href="{{ site.social.links[0] }}" alt="Twitter" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
               <a href="{{ site.social.links[1] }}" alt="GitHub" target="_blank"><i class="fa fa-github fa-lg"></i></a>
               <a href="{{ site.social.links[2] }}" alt="LinkedIn" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
@@ -56,12 +57,12 @@
             </div>
           </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
+        <ul class="nav navbar-nav collapse navbar-collapse navbar-right">
           <li>
-            <form id="search-form" method="get" action="/search" class="navbar-form" role="search">
+            <form id="search-form" class="navbar-form" method="get" action="/search" role="search">
               <div class="form-group has-feedback">
-                <input id="search-input" type="text" class="form-control-material" name="query" autocomplete="off">
-                <i class="fa fa-search fa-small form-control-feedback"></i>
+                <input id="search-input" class="form-control-material" type="search" name="query" autocomplete="off" placeholder="Search...">
+                <i id="search-submit" class="fa fa-search form-control-feedback" aria-hidden="true"></i>
               </div>
             </form>
           </li>
@@ -69,9 +70,6 @@
       </div>
     </nav>
   </header>
-
-  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
   <div class="container">
     <div class="row">
@@ -85,13 +83,10 @@
   <footer>
     <div class="text-center small">
       <p>
-        Copyright &copy; {{ site.author }} . {{ site.time | date: '%Y' }}<br/>
+        Copyright <i class="fa fa-copyright" aria-hidden="true"></i> {{ site.author }} <br/>
       </p>
       <p>
-        Themed by <a href="http://www.hidroh.com/">hidroh</a>
-      </p>
-      <p>
-        <a href="" id="theme">Switch to light theme</a>
+        <i class="fa fa-bolt" aria-hidden="true"></i> {{ site.time | date: '%Y' }} <i class="fa fa-bolt" aria-hidden="true"></i> Switch to <a href="" id="theme">light theme</a><br/>
       </p>
     </div>
   </footer>
@@ -110,7 +105,7 @@
       location.reload();
     });
     if (supportLocalStorage() && localStorage.light === "true") {
-      $("#theme").text("Switch to dark theme");
+      $("#theme").text("dark theme");
       $("meta[name='theme-color']").attr("content", "#FFFFFF");
     }
   </script>

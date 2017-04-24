@@ -1,7 +1,7 @@
-title: "Duong Dang Chien's Blog"
-description: Software engineer who comes from Hanoi and lives in Singapore
+title: "ck1910's Blog"
+description: software engineer born in Hanoi and lives in Singapore
 url: http://www.dangchien.com 
-author: Duong Dang Chien
+author: ck1910
 twitter:
   username: dangchien87
 social:
@@ -16,10 +16,12 @@ permalink: /:year/:month/:day/:title/
 paginate: 5
 highlighter: rouge
 excerpt_separator: <!--more-->
+timezone: Asia/Singapore
 
 gems:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
+  - jemoji
 
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile', 'CNAME']

@@ -19,3 +19,8 @@ a#more, a.footnote { padding-top: $sizeNavbar; margin-top: -$sizeNavbar; }
   font-size: $sizeFontSm;
   a { word-break: break-word; }
 }
+.img-center {
+  display: block;
+  margin: auto;
+  width: 90%;
+}
