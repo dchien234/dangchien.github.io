@@ -13,7 +13,6 @@ The goal of this article is to walk you through the very first step in the proce
 
 <!--more-->[ ](#){: id="more"}
 
-
 ## Android application package
 Before we can jump into reversing an `apk`, we should understand how an Android app is built and the anatomy of an Android app.
 The process of generating an `apk` is pretty much straight forward, it can be sum up nicely in the following diagram:
@@ -74,6 +73,14 @@ $ adb pull /data/app/com.google.android.music-1/base.apk
    * [APK Downloader](https://apps.evozi.com/apk-downloader/)
    * [Google Play APK Downloader](http://apk-dl.com/)
 
+## Application general information
+We can easily obtain general information after having the APK by using a tool called `aapt` which is bundled inside Android SDK
+
+{% highlight shell %}
+$ <android-sdk-path>/build-tools/<version>/aapt dump badging <sample.apk>
+{% endhighlight %}
+
+Output will contain some helpful information like package name, version name, version code...
 
 ## Reversing the target
 
@@ -89,7 +96,7 @@ It will also produce a list of machine readble `smali` files, together with orig
 If the target application makes use of shared native libraries, there will be a folder called `lib` containing all `*.so` artifacts for different CPU architecture.
 
 {% highlight shell %}
-$ apktool d some-app.apk
+$ apktool d some-app.apk -o </some/output/dir>
     I: Using Apktool 2.2.2 on some-app.apk
     I: Loading resource table...
     I: Decoding AndroidManifest.xml with resources...
