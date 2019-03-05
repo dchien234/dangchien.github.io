@@ -122,5 +122,7 @@ Temporary Items
 ##############################
 _site/
 .sass-cache/
-node_modules
+.jekyll-cache/
+.jekyll-metadata
+node_modules/
 Gemfile.lock

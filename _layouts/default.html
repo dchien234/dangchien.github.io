@@ -21,10 +21,14 @@
         return false;
       }
     }
-    if (supportLocalStorage() && localStorage.light === "true") {
+    if (supportLocalStorage()) {
       var link = document.createElement("link");
       link.rel = "stylesheet";
-      link.href = "/assets/css/light.css";
+      if (localStorage.light === "true") {
+        link.href = "/assets/css/light.css";
+      } else {
+        link.href = "/assets/css/dark.css";
+      }
       document.head.appendChild(link);
     }
   </script>
@@ -55,16 +59,6 @@
               <a href="{{ site.social.links[2] }}" alt="LinkedIn" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
               <a href="{{ site.social.links[3] }}" alt="StackOverflow" target="_blank"><i class="fa fa-stack-overflow fa-lg"></i></a>
             </div>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav collapse navbar-collapse navbar-right">
-          <li>
-            <form id="search-form" class="navbar-form" method="get" action="/search" role="search">
-              <div class="form-group has-feedback">
-                <input id="search-input" class="form-control-material" type="search" name="query" autocomplete="off" placeholder="Search...">
-                <i id="search-submit" class="fa fa-search form-control-feedback" aria-hidden="true"></i>
-              </div>
-            </form>
           </li>
         </ul>
       </div>

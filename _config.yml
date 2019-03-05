@@ -17,7 +17,9 @@ paginate: 5
 highlighter: rouge
 excerpt_separator: <!--more-->
 timezone: Asia/Singapore
-
+sass:
+  sass_dir: _sass
+  style: compact
 gems:
   - jekyll-sitemap
   - jekyll-paginate

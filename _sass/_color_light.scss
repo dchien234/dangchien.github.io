@@ -1,17 +1,19 @@
 @import 'color_default';
 
-$colorPrimary: #FFF;
+$background: #f9fbfc;
+$colorPrimary: #FFFFFF;
 $colorPrimaryHighlight: #ECEFF1;
-$colorDivider: #EEE;
-$colorShadow: #999;
-$textColorEmphasis: #000;
+$colorDivider: $colorPrimaryHighlight;
+$colorShadow: #999999;
+$textColorEmphasis: #000000;
+$textColorTertiary: #3E4042;
 $textColorPrimary: #607D8B;
-$textColorSecondary: #777;
-$textColorInverse: #FFF;
+$textColorSecondary: #777777;
+$textColorInverse: #FFFFFF;
 $textColorLink: #337ab7;
 $textColorLinkHover: #23527c;
 
-$brandColorGithub: #333333;
-$brandColorLinkedIn: #0077B5;
+td { background-color: transparent !important; }
+tr:hover { background-color: $colorDivider !important; }
 
 @import 'pygments_github';
