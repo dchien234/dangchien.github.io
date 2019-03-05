@@ -75,12 +75,11 @@
 
   <div class="clearfix divider"></div>
   <footer>
-    <div class="text-center small">
+    <div class="text-center medium">
       <p>
         Copyright <i class="fa fa-copyright" aria-hidden="true"></i> {{ site.author }} <br/>
-      </p>
-      <p>
-        <i class="fa fa-bolt" aria-hidden="true"></i> {{ site.time | date: '%Y' }} <i class="fa fa-bolt" aria-hidden="true"></i> Switch to <a href="" id="theme">light theme</a><br/>
+        <a href="" id="theme">Switch to light theme</a> <br/>
+        <i class="fa fa-bolt" aria-hidden="true"></i> {{ site.time | date: '%Y' }} <i class="fa fa-bolt" aria-hidden="true"></i> <br/>
       </p>
     </div>
   </footer>
@@ -99,7 +98,7 @@
       location.reload();
     });
     if (supportLocalStorage() && localStorage.light === "true") {
-      $("#theme").text("dark theme");
+      $("#theme").text("Switch to dark theme");
       $("meta[name='theme-color']").attr("content", "#FFFFFF");
     }
   </script>

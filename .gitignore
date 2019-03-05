@@ -125,4 +125,3 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 node_modules/
-Gemfile.lock
