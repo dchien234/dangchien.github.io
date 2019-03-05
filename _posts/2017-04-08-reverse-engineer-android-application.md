@@ -11,7 +11,7 @@ As digital information becomes more valuable, companies are spending a lot of mo
 Protecting mobile applications becomes even more crucial since apps have been created to do almost every thing, from booking a cab to buying a house.
 The goal of this article is to walk you through the very first step in the process of hacking a mobile application, understanding the internal structure of a mobile app by reverse engineering its `apk`.
 
-<!--more-->[ ](#){: id="more"}
+<!--more-->[ ](#){:id="more"}
 
 ## Android application package
 Before we can jump into reversing an `apk`, we should understand how an Android app is built and the anatomy of an Android app.
@@ -45,6 +45,7 @@ $ ls -la some-dir/
     -rw-r--r--   1 <username>  staff   4.1M Jan  1  2009 resources.arsc
 {% endhighlight %}
 
+{:.table}
 | Directory | Content & Description |
 |:-----------|:-------------|
 | `AndroidManifest.xml` | a binary file describing the name, version, access rights, referenced libraries... it can be converted into readable plaintext XML with tools such as [AXMLPrinter2][1], [apktool][2], or [androguard][3] |
@@ -54,7 +55,6 @@ $ ls -la some-dir/
 | `lib` | contains compiled native shared library for different CPU architecture: `armeabi`, `armeabi-v7a`, `arm64-v8a`, `x86`, `x86_64`, `mips` |
 | `res` | contains resources not compiled into `resources.arsc` |
 | `resources.arsc` | contains precompiled resources, such as binary XML for layouts, styles... |
-{: .table}
 
 ## Obtaining the target
 There are a few ways to obtain the target application `apk`:

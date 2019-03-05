@@ -2,8 +2,11 @@ title: "ck1910's Blog"
 description: software engineer born in Hanoi and lives in Singapore
 url: http://www.dangchien.com 
 author: ck1910
+encoding: utf-8
+
 twitter:
   username: dangchien87
+
 social:
   name: Duong Dang Chien
   links:
@@ -17,13 +20,17 @@ paginate: 5
 highlighter: rouge
 excerpt_separator: <!--more-->
 timezone: Asia/Singapore
+
 sass:
   sass_dir: _sass
   style: compact
-gems:
+
+plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-avatar
+  - jekyll-watch
   - jemoji
 
-exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile', 'CNAME']
+exclude: ['CNAME', 'Gemfile', 'Gemfile.lock', 'README.md']
