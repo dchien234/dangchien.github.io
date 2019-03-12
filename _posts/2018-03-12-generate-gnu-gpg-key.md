@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Generating a new GPG key"
-date:   2018-03-11 08:17:46+0800
+date:   2018-03-12 10:15:46+0800
 description: "Generating a new GPG key and use it with GitHub"
 tags: software development tutorial gnu gpg
 ---
@@ -50,6 +50,21 @@ $ gpg --armor --export <key ID>
 
 <ASCII armored PGP Public Key Block (exported to a *.asc file)>
 -----END PGP PUBLIC KEY BLOCK-----
+```
+
+### Revoking a GPG key
+
+```bash
+# In case that secret key has been compromised or you lose the access to secret key.
+# You should generate a revocation certificate and publish it.
+# This default location contains all revocation certificates associated with GPG keys that have been created before.
+$ ls /Users/<userid>/.gnupg/openpgp-revocs.d/
+.
+..
+AD5EB395BFC02BF4CC37C13ADBA9BB8104AB0A1E.rev
+
+# Otherwise, you can generate revocation certificate using this
+$ gpg --output /Users/<userid>/.gnupg/openpgp-revocs.d/<keyId>.asc --gen-revoke <keyId>
 ```
 
 :balloon::balloon::balloon::balloon:
