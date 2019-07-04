@@ -8,11 +8,27 @@
     <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <link rel="shortcut icon" href="//secure.gravatar.com/avatar/1389fdbe9c193aa54035df274e8220f3?s=16" />
-  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,800|Lora:400,700|Inconsolata' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  <link href="/assets/css/style.css" rel="stylesheet" />
+  <link
+    rel="shortcut icon"
+    href="//secure.gravatar.com/avatar/1389fdbe9c193aa54035df274e8220f3?s=16">
+  <link
+    rel="stylesheet"
+    href="//fonts.googleapis.com/css?family=Open+Sans:400,800|Lora:400,700|Inconsolata"
+    type="text/css">
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link
+    rel="stylesheet"
+    href="/assets/css/style.css">
+
   <script type="text/javascript">
     function supportLocalStorage() {
       try {
@@ -32,12 +48,21 @@
       document.head.appendChild(link);
     }
   </script>
-  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  {% if jekyll.environment == 'production' %}
+    {% if site.google_tag_manager %}
+      {% include tag_manager_head.html %}
+    {% endif %}
+    {% if site.google_analytics %}
+      {% include analytics.html %}
+    {% endif %}
+  {% endif %}
 </head>
 
 <body>
-
   <header>
     <nav class="navbar navbar-default navbar-fixed-top brand" role="navigation">
       <div class="container-fluid">
@@ -84,7 +109,10 @@
     </div>
   </footer>
 
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
   <script type="text/javascript">
     $("nav").click(function(evt) {
       if ("DIV" !== evt.target.tagName) { return true; }
@@ -102,17 +130,5 @@
       $("meta[name='theme-color']").attr("content", "#FFFFFF");
     }
   </script>
-{% if jekyll.environment != "development" %}
-  <!-- Google Tag Manager -->
-  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WLBXB3"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-WLBXB3');</script>
-  <!-- End Google Tag Manager -->
-{% endif %}
-
 </body>
 </html>

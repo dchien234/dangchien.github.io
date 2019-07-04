@@ -15,6 +15,9 @@ social:
     - https://www.linkedin.com/in/duong-dang-chien-1b917b22/
     - https://stackoverflow.com/users/1277688/ck1910
 
+google_analytics: UA-35823367-1
+google_tag_manager: GTM-5KNFDCM
+
 permalink: /:year/:month/:day/:title/
 paginate: 5
 highlighter: rouge
