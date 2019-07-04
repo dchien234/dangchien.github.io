@@ -110,8 +110,3 @@ comments: true
 <script type="text/javascript">
   $('article').readingTime();
 </script>
-{% if jekyll.environment == 'production' %}
-  {% if site.google_tag_manager %}
-    {% include tag_manager_footer.html %}
-  {% endif %}
-{% endif %}
