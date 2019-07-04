@@ -16,7 +16,6 @@ module Jekyll
 
   class TagGenerator < Generator
     safe true
-    
     def generate(site)
       if site.layouts.key? 'tag_index'
         dir = 'tags'
@@ -25,7 +24,6 @@ module Jekyll
         end
       end
     end
-  
     def write_tag_index(site, dir, tag)
       index = TagIndex.new(site, site.source, dir, tag)
       index.render(site.layouts, site.site_payload)
