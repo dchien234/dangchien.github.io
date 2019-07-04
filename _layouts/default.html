@@ -131,5 +131,8 @@
       $("meta[name='theme-color']").attr("content", "#FFFFFF");
     }
   </script>
+  {% if jekyll.environment == 'production' %}
+    {% include disqus.html %}
+  {% endif %}
 </body>
 </html>
