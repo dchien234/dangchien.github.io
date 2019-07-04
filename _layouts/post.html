@@ -109,8 +109,8 @@ comments: true
   $('article').readingTime();
 </script>
 {% if jekyll.environment == 'production' %}
+  {% include disqus.html %}
   {% if site.google_tag_manager %}
     {% include tag_manager_footer.html %}
   {% endif %}
-  {% include disqus.html %}
 {% endif %}
