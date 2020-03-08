@@ -3,6 +3,7 @@ layout: post
 title:  "Pick a license. Any license."
 date:   2019-10-08 15:50:25+0800
 description: "A bookmarked article from Coding horror about the software license."
+categories: technology
 tags: software license blog
 ---
 
