@@ -1,0 +1,230 @@
+{
+    "info": {
+        "_postman_id": "4afc9978-3e5e-4bab-9fc8-5973c9f36052",
+        "name": "PostMan Signature Example",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Lib install",
+            "event": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "id": "469df052-1d9f-40da-8e22-a78c68e22111",
+                        "exec": [
+                            "pm.test(\"Status code should be 200\", function () {",
+                            "    pm.response.to.have.status(200)",
+                            "    pm.globals.set(\"pmlib_code\", responseBody)",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                },
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "id": "4a1873e6-cac6-454b-b008-67abd814b0b1",
+                        "exec": [
+                            ""
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ],
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": ""
+                },
+                "url": {
+                    "raw": "https://joolfe.github.io/postman-util-lib/dist/bundle.js",
+                    "protocol": "https",
+                    "host": [
+                        "joolfe",
+                        "github",
+                        "io"
+                    ],
+                    "path": [
+                        "postman-util-lib",
+                        "dist",
+                        "bundle.js"
+                    ]
+                },
+                "description": "Load the postman-util-lib from github.io and load into postman global variable."
+            },
+            "response": []
+        },
+        {
+            "name": "GC Signature Test",
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "id": "cdfe509e-9bb1-44b3-8cd4-1eea957503d1",
+                        "exec": [
+                            "",
+                            "// Loading the library",
+                            "eval(pm.globals.get('pmlib_code'));",
+                            "",
+                            "// RSAOAEP signature example",
+                            "const pubkey = '-----BEGIN PUBLIC KEY-----\\n'+",
+                            "'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA21U9UomOcPAuCJ22Sp1q\\n'+",
+                            "'ap018JQbpep1FxCiD7rxZ6yspRjcG/mrgXjZi6QCxOEMUFWuWznDw7mHsLyx+w1U\\n'+",
+                            "'AxDsETfVDPL+OuFx07VZvq56HeBVLcLsug59kciV+s+RIJqT/rsv8oTwtIR55/gt\\n'+",
+                            "'TYszRwd44fdNiAzT1Ldzbm0XLfF3FEpht0yH4ziSB2H7ou5v8p0GcjiETXa7rMjH\\n'+",
+                            "'Ox00StP1HA3yrTV8nXDW6yqbkQcfWdpJphojpi8ipfkdckqm4HCxV6gAekO+CvCA\\n'+",
+                            "'jyKzD+6UXeYOPm8oclZ+uUJ2X5DVKu3UH1T3X/4vbN14g/8met31snjT2ufw2sWH\\n'+",
+                            "'gwIDAQAB\\n'+",
+                            "'-----END PUBLIC KEY-----\\n';",
+                            "",
+                            "const pk='-----BEGIN PRIVATE KEY-----\\n'+",
+                            "'MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDbVT1SiY5w8C4I\\n'+",
+                            "'nbZKnWpqnTXwlBul6nUXEKIPuvFnrKylGNwb+auBeNmLpALE4QxQVa5bOcPDuYew\\n'+",
+                            "'vLH7DVQDEOwRN9UM8v464XHTtVm+rnod4FUtwuy6Dn2RyJX6z5EgmpP+uy/yhPC0\\n'+",
+                            "'hHnn+C1NizNHB3jh902IDNPUt3NubRct8XcUSmG3TIfjOJIHYfui7m/ynQZyOIRN\\n'+",
+                            "'drusyMc7HTRK0/UcDfKtNXydcNbrKpuRBx9Z2kmmGiOmLyKl+R1ySqbgcLFXqAB6\\n'+",
+                            "'Q74K8ICPIrMP7pRd5g4+byhyVn65QnZfkNUq7dQfVPdf/i9s3XiD/yZ63fWyeNPa\\n'+",
+                            "'5/DaxYeDAgMBAAECggEBAKx+E/UWc2yEp19lURjLRgbEzsf+YuQQSLe0ABAo8HOd\\n'+",
+                            "'jEVnEKv7pZL0TPqSKQ9XAg0n5TCfdEM4ZOts6vhK2hhzNYSxCR/e9muuI4vhIsxg\\n'+",
+                            "'gW9/nt2XX/9PKBf/zVvr4/HlP6Dk6+dp/7eoPAtf1ZkXcWNaEAp+KH5nwCyZffGH\\n'+",
+                            "'6r7iTjjS7eedPIQ4YwkE1nKSynOEuyco7qyQqeHW/KiJrQgxjcVzPPIR8V+N2ycE\\n'+",
+                            "'n/KCnJw2oEhx7wC2vv1I2Nmci7OnTRZED057th63m8mZOeTk8QBcqUSMgF4nFkdb\\n'+",
+                            "'bqb3v3nAw9Uj9FfMoeqqSC7j+aygG3mGGIQws0po3BkCgYEA+KIc7rPSCQIuwbjS\\n'+",
+                            "'h7Favf9N1MscyXv5tpD7fCynjfMEN3DnvtbfMM3Sv5fpq4+PDXpsZNPyurCtKiPD\\n'+",
+                            "'mBd0NzFJrRZSUvNtFFq47IB6ozGAayOl0DO63xU3YbuDrFdAcQXRNySoR2xVzfP6\\n'+",
+                            "'rrItVHJCBeXV11SZMPj6jJuyXvcCgYEA4dTiJsf8I93fyAQZYneQyEss3yt1arZ1\\n'+",
+                            "'sF6OKOxhJUHjJf90bhBKNR+bx/76/9fhjdMKpcl7ttZ1+PR08zbrG6ftJXAVULhB\\n'+",
+                            "'O4MCe8eneg0Zp0hDMaObSNL0HL91b8W67KNfBLfRZ7xhWvuqw+kLF0YN908dDHkD\\n'+",
+                            "'1HsTg+jynNUCgYAIHmMLeFu3Z5bXRI27WJM5+Qg1lpxOB/pTd9B+cYbXH8RXexxW\\n'+",
+                            "'IvYOxenHz9IVhA6Lxh+b+z/F0NcWtSxB3yIwWy+osz3k74X0UDIRpvBaO9eRqAxW\\n'+",
+                            "'DBpiBnNUgab/DapRBnuabVwBWQxEOV9KLQ9F3qVBRAwDiAOokbi8tqjQaQKBgBIs\\n'+",
+                            "'aY6pZVcVkd6sxcYwzQvxUMkc3DQcPthUo6gTbbXr2XXDWwFIelBQHN85W8We/93D\\n'+",
+                            "'8AVrc3NBSvkf4xF3h/AP0XvDy1NVoJpDbr27UXT2/OuDWzTxb5uqrk5p8e9uwB4u\\n'+",
+                            "'/4SHrmhktoj128YsSOI0lwch7LqGOpKs3OMuqeeJAoGBALMjVS/KFZ+pfwX5O/wg\\n'+",
+                            "'ccEUCqtzXaiAg7YULrz221d8oNfRxZGF9u7efw1yGFLW4rIhBkwICugMlVPs+60+\\n'+",
+                            "'GdUXXFxaJDkGJY6V1jo24hvUcARt0cpGJ3DQZxK+D7BHnHfK1rNnz03Ln4KIrsUt\\n'+",
+                            "'7UKi6ELq0R38VQWBPFj8gHSt\\n'+",
+                            "'-----END PRIVATE KEY-----\\n'",
+                            "",
+                            "",
+                            "const path='/'+pm.request.url.path.join('/');",
+                            "const timestamp= (new Date()).toISOString(); ",
+                            "const clientId='216610000010383684932';",
+                            "const body= pm.request.body;",
+                            "const payload = 'POST' + \" \" + path + \"\\n\" + clientId + \".\" + timestamp",
+                            "                + \".\" + body;",
+                            "",
+                            "//console.log(`public key is:\\r\\n${pubkey}`);",
+                            "console.log(`url path is:${path}`);",
+                            "console.log(`timestamp is:${timestamp}`);",
+                            "console.log(`client id:${clientId}`);",
+                            "console.log(`content to sign is\\r\\n${payload}`);",
+                            "//const fileContent = 'My file content comes here...';",
+                            "//var keyObj = pmlib.rs.KEYUTIL.getKey(pubkey);",
+                            "//const encHex = pmlib.rs.KJUR.crypto.Cipher.encrypt(fileContent, keyObj, 'RSAOAEP');",
+                            "//console.log(encHex);",
+                            "//console.log(pmlib.rs);",
+                            "",
+                            "const sig = new pmlib.rs.crypto.Signature({\"alg\": \"SHA256withRSA\"});",
+                            "sig.init(pk);",
+                            "sig.updateString(payload);",
+                            "const sigVal = sig.sign();",
+                            "const sigStr= pmlib.rs.hextob64u(sigVal);",
+                            "console.log(`signature is:\\r\\n${sigStr}`);",
+                            "",
+                            "postman.setEnvironmentVariable('signature', `algorithm=RSA256, keyVersion=0, signature= ${sigStr}`);",
+                            "postman.setEnvironmentVariable('clientId',clientId);",
+                            "postman.setEnvironmentVariable('requestTime',timestamp);",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        "type": "text/javascript"
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "id": "6f956fb0-464a-497b-93b8-a31178bc0b8d",
+                        "exec": [
+                            "// // Verify the returned JWT ",
+                            "// const pubkey = '-----BEGIN PUBLIC KEY-----\\n' +",
+                            "// 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAstXEkU/agbNkQgh6a9DV\\n' +",
+                            "// 'C/WXGmNy8g+hdTOBhYUk5PfZCwTNt5SCYBLjIPhs2ZRrNuCN3PhwHRQPQOTsS6Nl\\n' +",
+                            "// 'Bzw+SjPVFBhPcbMHbJWnC87Q5ID/uAuwJjcUQXUTVspwIgfRmHvuuT7w7AYnCNvz\\n' +",
+                            "// 'B5TuPj2vVH8rij9BXkAHambaeGG7L10MPeUiVU6M0F/QKCJhEWAYGEt4NffSXETx\\n' +",
+                            "// 'zHSl8nyXxVJfnjxVhnZyZVXTIpLwvRy04hnkAoFexh7npRtnQdsLuIHtaJsm7gFY\\n' +",
+                            "// 'mxhr3Nxbh9p1pC7fHpJ+jMcxAAhA07WqYf6lOsxXHfPav1FEMX214YTsKTw68xqo\\n' +",
+                            "// 'DwIDAQAB\\n' +",
+                            "// '-----END PUBLIC KEY-----\\n'",
+                            "// const body = JSON.parse(responseBody)",
+                            "// const result = pmlib.jwtVerify(body.jwt, pubkey)",
+                            "// console.log('Descoded JWT: '  + JSON.stringify(result))"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ],
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Client-id",
+                        "value": "{{clientId}}",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Signature",
+                        "value": "{{signature}}",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Request-Time",
+                        "value": "{{requestTime}}",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"order\":{\n    \"referenceOrderId\":\"OrderID_0101010101\",\n    \"orderDescription\":\"SHOES\",\n    \"orderAmount\":{\n       \"value\":\"100\",\n       \"currency\":\"JPY\"\n    },\n       \"merchant\":{\n          \"referenceMerchantId\":\"M00000000001\",\n          \"merchantMCC\":\"1405\",\n          \"merchantName\":\"UGG\",\n          \"merchantAddress\":{\n             \"region\":\"JP\",\n             \"city\":\"xxx\"\n          },\n          \"store\":{\n             \"referenceStoreId\":\"S0000000001\",\n             \"storeName\":\"\bUGG-2\",\n             \"storeMCC\":\"1405\"\n          }\n       }\n }, \n \"acquirerId\": \"1022188000000000001\",\n \"pspId\":\"1022172000000000001\",\n \"paymentRequestId\":\"2018112919074101000700000077771\",\n \"paymentAmount\":{\n    \"value\":\"100\",\n    \"currency\":\"JPY\"\n },\n  \"paymentMethod\":{\n       \"paymentMethodType\": \"CONNECT_WALLET\",\n       \"paymentMethodId\": \"281006050000000000125733DAHJJWDQ\"\n  },\n  \"payToAmount\":{\n    \"value\":\"1000\",\n    \"currency\":\"KRW\"\n },\n \"paymentQuote\":{\n    \"quoteId\":\"1234567\",\n    \"quoteCurrencyPair\":\"JPY/KRW\",\n    \"quotePrice\":\"10.0000\"\n  },\n \"paymentFactor\": {\n    \"isAgreementPayment\":true\n } \n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:8080/ac/v1/payments/pay",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "ac",
+                        "v1",
+                        "payments",
+                        "pay"
+                    ]
+                },
+                "description": "Some usefull example about how to use the library."
+            },
+            "response": []
+        }
+    ],
+    "protocolProfileBehavior": {}
+}
