@@ -60,31 +60,32 @@ comments: true
   </div>
 </div>
 
-<div class="btn-group dropup">
-  <button type="button" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Share <span class="caret"></span>
+<div class="row">
+  <div class="btn-group dropup" style="margin-left: 10px; margin-right: 10px;">
+    <button type="button" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Share <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a href data-share-target="pocket"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+      <li><a href data-share-target="twitter"><i class="fa fa-twitter"></i> Twitter</a></li>
+      <li><a href data-share-target="facebook"><i class="fa fa-facebook"></i> Facebook</a></li>
+      <li><a href data-share-target="googleplus"><i class="fa fa-google-plus"></i> Google+</a></li>
+      <li><a href data-share-target="linkedin"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+      <li><a href data-share-target="hackernews"><i class="fa fa-hacker-news"></i> Hacker News</a></li>
+      <li><a href data-share-target="reddit"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
+    </ul>
+  </div>
+  <button class="btn btn-default btn-lg" data-toggle="collapse" data-target="#disqus_thread">
+    Comments
+    <span class="badge">
+      <a href="{{ site.url }}{{ page.url }}#disqus_thread" data-disqus-identifier="{{page.id}}">
+      {% if jekyll.environment == 'development' %}
+      0
+      {% endif %}
+      </a>
+    </span>
   </button>
-  <ul class="dropdown-menu">
-    <li><a href data-share-target="pocket"><i class="fa fa-get-pocket"></i> Pocket</a></li>
-    <li><a href data-share-target="twitter"><i class="fa fa-twitter"></i> Twitter</a></li>
-    <li><a href data-share-target="facebook"><i class="fa fa-facebook"></i> Facebook</a></li>
-    <li><a href data-share-target="googleplus"><i class="fa fa-google-plus"></i> Google+</a></li>
-    <li><a href data-share-target="linkedin"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
-    <li><a href data-share-target="hackernews"><i class="fa fa-hacker-news"></i> Hacker News</a></li>
-    <li><a href data-share-target="reddit"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
-  </ul>
 </div>
-
-<button class="btn btn-default btn-lg" data-toggle="collapse" data-target="#disqus_thread">
-  Comments
-  <span class="badge">
-    <a href="{{ site.url }}{{ page.url }}#disqus_thread" data-disqus-identifier="{{page.id}}">
-    {% if jekyll.environment == 'development' %}
-    0
-    {% endif %}
-    </a>
-  </span>
-</button>
 
 <div id="disqus_thread" class="collapse">
   {% if jekyll.environment == 'development' %}

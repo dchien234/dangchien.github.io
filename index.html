@@ -3,20 +3,20 @@ layout: default
 ---
 
 {% for post in paginator.posts %}
-    <h3>
-      <small>
-        <i class="fa fa-calendar"></i>&nbsp; {{ post.date | date: "%b %d, %Y" }}
-      </small>
-    </h3>
-    <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+  <h3>
+    <small>
+      <i class="fa fa-calendar"></i>&nbsp; {{ post.date | date: "%b %d, %Y" }}
+    </small>
+  </h3>
+  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
 
-    <article>
-    {{ post.excerpt | strip_footnotes }}
-    </article>
+  <article>
+  {{ post.excerpt | strip_footnotes }}
+  </article>
 
+  <div align="right">
     <a href="{{ post.url }}#more" class="btn btn-default btn-lg">Read more&nbsp;&nbsp;<i class="fa fa-long-arrow-right"></i></a>
-
-    <div class="clearfix divider"></div>
+  </div>
 {% endfor %}
 
 {% if paginator.total_pages >= 1 %}
