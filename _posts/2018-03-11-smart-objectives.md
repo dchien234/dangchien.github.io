@@ -12,29 +12,36 @@ What does `SMART` mean? `SMART` is an acronym that you can use to guide your goa
 <!--more-->[ ](#){:id="more"}
 
 - `S`pecific (simple, sensible, significant).
-  - What do I want to accomplish?
-  - Why is this goal important?
-  - Who is involved?
-  - Where is it located?
-  - Which resources or limits are involved?
+  + Who: Who is involved in this goal?
+  + What: What do I want to accomplish?
+  + Where: Where is this goal to be achieved? Where is it located?
+  + When: When do I want to achieve this goal?
+  + Why: Why do I want to achieve this goal? Why is this important?
+  + Which resources or limits are involved?
 - `M`easurable (meaningful, motivating).
-  - How much?
-  - How many?
-  - How will I know when it is accomplished?
+  + How much?
+  + How many?
+  + How will I know when it is accomplished?
+  + What is my indicator of progress?
 - `A`chievable (agreed, attainable).
-  - How can I accomplish this goal?
-  - How realistic is the goal, based on other constraints, such as financial factors?
+  + Do I have the resources and capabilities to achieve the goal? If not, what am I missing?
+  + How can I accomplish this goal? Have others done it successfully before?
+  + How realistic is the goal, based on other constraints, such as financial factors?
 - `R`elevant (reasonable, realistic and resourced, results-based).
-  - Does this seem worthwhile?
-  - Is this the right time?
-  - Does this match our other efforts/needs?
-  - Am I the right person to reach this goal?
-  - Is it applicable in the current socio-economic environment?
-- `T`ime-Bound (time-based, time limited, time/cost limited, timely, time-sensitive).
-  - When?
-  - What can I do six months from now?
-  - What can I do six weeks from now?
-  - What can I do today?
+  + Is the goal realistic and within reach?
+  + Is the goal reachable given the time and resources?
+  + Are you able to commit to achieving the goal?
+  + Does this seem worthwhile?
+  + Is this the right time?
+  + Does this match our other efforts/needs?
+  + Am I the right person to reach this goal?
+  + Is it applicable in the current socio-economic environment?
+- `T`ime-Bound (timely, time-based, time limited, time/cost limited, timely, time-sensitive).
+  + When? Does my goal have a deadline?
+  + By when do you want to achieve your goal?
+    * What can I do six months from now?
+    * What can I do six weeks from now?
+    * What can I do today?
 
 An example of how to set a SMART goal:
 
