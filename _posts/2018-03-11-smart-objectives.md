@@ -66,4 +66,4 @@ Some people even have expanded it to include extra focus areas, for example `SMA
 - `E`valuate
 - `R`eview
 
-:balloon::balloon::balloon::balloon:
+:beer:

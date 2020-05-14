@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Blog Tags
+permalink: /tags
 ---
 # {{ page.title }}
 

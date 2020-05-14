@@ -1,6 +1,6 @@
 title: "ck1910's Blog"
 description: software engineer born in Hanoi and lives in Singapore
-url: http://www.dangchien.com 
+url: http://www.dangchien.com
 author: ck1910
 encoding: utf-8
 
@@ -8,12 +8,14 @@ twitter:
   username: dangchien87
 
 social:
-  name: Duong Dang Chien
+  name: Dang Chien
   links:
     - https://twitter.com/dangchien87
     - https://github.com/DangChien
     - https://www.linkedin.com/in/duong-dang-chien-1b917b22/
     - https://stackoverflow.com/users/1277688/ck1910
+    - https://paypal.me/ck1910?locale.x=en_US
+    - https://www.buymeacoffee.com/ck1910
 
 google_analytics: UA-35823367-1
 google_tag_manager: GTM-5KNFDCM

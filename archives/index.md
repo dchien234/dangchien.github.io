@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Blog Archives
+permalink: /archives
 ---
 
 # {{ page.title }}

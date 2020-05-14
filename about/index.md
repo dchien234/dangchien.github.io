@@ -1,6 +1,7 @@
 ---
 layout: article
 title: About Me
+permalink: /about
 ---
 
 # {{ page.title }}

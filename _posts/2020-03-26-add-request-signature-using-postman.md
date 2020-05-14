@@ -30,10 +30,10 @@ Use the below commands to generate key pairs. These commands generate key pairs 
 openssl genrsa -out client_private_key_php_dotnet.pem
 
 #java developers need to change the PK to PKCS8 format
-openssl pkcs8 -topk8 -inform PEM -in client_private_key_php_dotnet.pem -outform PEM -nocrypt -out client_private_key_pkcs8.pem 
+openssl pkcs8 -topk8 -inform PEM -in client_private_key_php_dotnet.pem -outform PEM -nocrypt -out client_private_key_pkcs8.pem
 
 #generate public key
-openssl rsa -in client_private_key_php_dotnet.pem -pubout -out client_public_key_php_dotnet.pem 
+openssl rsa -in client_private_key_php_dotnet.pem -pubout -out client_public_key_php_dotnet.pem
 
 #generate private key to JAVA format
 cat client_private_key_pkcs8.pem | grep -v "^\-" | tr -d "\n" | sed 's/%$//' > client_private_key_java.pem
