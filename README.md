@@ -2,7 +2,7 @@
 
 ## Setup with GitHub Pages & Jekyll
 
-[Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll#step-1-create-a-local-repository-for-your-jekyll-site)  
+[Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll#step-1-create-a-local-repository-for-your-jekyll-site)
 
 ### Prerequisite
 
