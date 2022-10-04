@@ -56,6 +56,6 @@ gem update --system
 [2.1]: http://i.imgur.com/9I6NRUm.png "follow me on github"
 
 [1]: https://twitter.com/dangchien87
-[2]: https://github.com/DangChien
+[2]: https://github.com/dchien234
 
 - Dang Chien [![alt text][1.1]][1][![alt text][2.1]][2]
