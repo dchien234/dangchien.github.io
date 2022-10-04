@@ -11,7 +11,6 @@ ruby --version
 gem --version
 gem install bundler
 bundle install
-gem update --system
 ```
 
 ### Develop
@@ -20,12 +19,35 @@ gem update --system
 bundle exec jekyll serve --incremental
 ```
 
+**How to add a new gem to `Gemfile`?**
+```bash
+bundle add webrick
+```
+
 ### Update
 
+**How to update the bundler version in a `Gemfile.lock`?**
+```bash
+# Install the latest bundler version
+gem install bundler
+
+# Update the bundler version in Gemfile.lock
+bundle update --bundler
+
+# Confirm it worked
+tail -n2 Gemfile.lock
+```
+
+**How to update a particular gem in `Gemfile`?**
 ```bash
 bundle update github-pages
-or
+# or
 bundle update
+```
+
+**How to update all default gems in the system?**
+```bash
+gem update --system
 ```
 
 ## Authors
